@@ -44,7 +44,7 @@ const renderMessages = () => {
 	})
 }
 
-if(!chat) return 'Loading...';
+if(!chat) return 'Завантаження...';
 
 return(
 	<div className='chat-feed'>

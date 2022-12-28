@@ -1,5 +1,3 @@
-
-
 const LogOutButton = ({isAuth, setIsAuth}) => {
 
   const handleLogout = () => {

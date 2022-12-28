@@ -23,21 +23,21 @@ const LoginForm = ({isAuth, setIsAuth}) => {
       localStorage.setItem("username", username);
       localStorage.setItem("password", password);
     } catch (error) {
-      setError("Oops");
+      setError("Спробуйте ще раз");
     }
   };
 
   return (
     <div className="wrapper">
       <div className="form">
-        <h1 className="title">Chat Application</h1>
+        <h1 className="title">Чат на React.js</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={username}
             onChange={(e) => setUserName(e.target.value)}
             className="input"
-            placeholder="Username"
+            placeholder="Логін"
             required
           />
           <input
@@ -45,15 +45,15 @@ const LoginForm = ({isAuth, setIsAuth}) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="input"
-            placeholder="Password"
+            placeholder="Пароль"
             required
           />
           <div align="center">
             <button type="submit" className="button">
-              <span>Start Chatting</span>
+              <span>Почати листування</span>
             </button>
           </div>
-          <h2 className="error">{error}</h2>
+          <h2 className="error" style={{color: '#45175E'}}>{error}</h2>
         </form>
       </div>
     </div>
